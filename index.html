@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="lines">
+        <!-- Only generate lines with CSS instead of repeating divs -->
+        <div class="line"></div>
+    </div>
+
+    <div class="container">
+        <div class="left">
+            <div class="logo">
+                <img src="asset/logo.svg" alt="Logo">
+            </div>
+            <div class="weather-info">
+                <h2 class="temprature"></h2>
+                <div class="curr-loc-time-date">
+                    <h3></h3>
+                    <p></p>
+                </div>
+                <img src="asset/cloud-icon.png" alt="Cloud Icon" class="cloud-icon">
+            </div>
+        </div>
+
+        <div class="right-container">
+            <div class="right-content">
+                <div class="search-box">
+                    <input type="text" placeholder="Search location...">
+                    <img src="asset/search-icon.png" alt="Search">
+                </div>
+
+                <p class="weather-details">Weather Details...</p>
+                <h4 class="weather-condition"></h4>
+
+                <div class="weather-stats">
+                    <p>Temp max</p>
+                    <div class="flex">
+                        <p></p>
+                        <img src="asset/temprature-max.png" alt="Max Temp">
+                    </div>
+                </div>
+
+                <div class="weather-stats">
+                    <p>Temp min</p>
+                    <div class="flex">
+                        <p></p>
+                        <img src="asset/temprature-min.png" alt="Min Temp">
+                    </div>
+                </div>
+
+                <div class="weather-stats">
+                    <p>Humidity</p>
+                    <div class="flex">
+                        <p></p>
+                        <img src="asset/humadity.png" alt="Humidity">
+                    </div>
+                </div>
+
+                <div class="weather-stats">
+                    <p>Cloudy</p>
+                    <div class="flex">
+                        <p></p>
+                        <img src="asset/cloud.png" alt="Cloudy">
+                    </div>
+                </div>
+
+                <div class="weather-stats">
+                    <p>Wind</p>
+                    <div class="flex">
+                        <p></p>
+                        <img src="asset/wind.png" alt="Wind">
+                    </div>
+                </div>
+
+                <div class="border"></div>
+                <p class="weather-forecast">Today’s Weather Forecast...</p>
+
+                <div id="forecast-container">
+                    <!-- Forecasts will be injected here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

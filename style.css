@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: white;
+    background-image: url(asset/bg-weather-phone.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    min-height: 100vh;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+img {
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+    gap: 5px;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.line {
+    background-color: rgba(255, 0, 0, 0.16);
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    /* Default vertical */
+    padding: 1rem;
+    gap: 2rem;
+}
+
+.logo {
+    padding-top: 1.5rem;
+}
+
+
+.weather-info {
+    display: flex;
+    align-items: center;
+    margin-top: 20rem;
+}
+
+.temprature {
+    font-size: 5rem;
+    font-weight: 400;
+}
+
+.curr-loc-time-date {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.curr-loc-time-date h3 {
+    font-size: 2rem;
+    font-weight: 350;
+}
+
+.curr-loc-time-date p {
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+.cloud-icon {
+    width: 2.6rem;
+    padding-top: 1.2rem;
+}
+
+.right-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background: rgb(53 74 80 / 17%);
+    backdrop-filter: blur(3px);
+    overflow-y: auto;
+}
+
+.right-container::-webkit-scrollbar {
+    display: none;
+}
+
+.right-content {
+    width: 100%;
+    padding: 1.5rem 1rem;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px white solid;
+    padding-bottom: 0.4rem;
+}
+
+.search-box input {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    width: 100%;
+}
+
+input:focus {
+    outline: none;
+    border: none;
+    color: white;
+}
+
+.search-box img {
+    width: 1.3rem;
+    margin-left: 0.7rem;
+    cursor: pointer;
+}
+
+.weather-details {
+    font-size: 0.9rem;
+    font-weight: 300;
+    padding: 2rem 0rem;
+    color: #ffffffd1;
+}
+
+.weather-condition {
+    font-weight: 400;
+    font-size: 1rem;
+    padding-top: 0.5rem;
+    text-transform: uppercase;
+}
+
+.weather-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    font-weight: 350;
+    color: #ffffff95;
+    font-size: 0.9rem;
+    margin-bottom: -0.8rem;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.border {
+    border-bottom: 1px solid white;
+    padding-top: 4.5rem;
+}
+
+.weather-forecast {
+    font-size: 0.9rem;
+    font-weight: 300;
+    padding: 2rem 0rem;
+    color: #ffffff;
+}
+
+.weather-forecast-stats {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+}
+
+.forecast-img {
+    width: 1.8rem;
+    margin-right: 1rem;
+}
+
+.forecast p:nth-child(1) {
+    color: white;
+    font-size: 0.9rem;
+}
+
+.forecast p:nth-child(2) {
+    color: #ffffff95;
+    font-size: 0.8rem;
+}
+
+.forecast-temp {
+    color: #ffffff95;
+    font-size: 1.2rem;
+}
+
+/* Tablet view (iPad) - stays vertical */
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        background-image: url(asset/bg-weather-tablet.png);
+    }
+
+    .logo {
+        margin-left: 3rem;
+    }
+
+    .weather-info {
+        margin-top: 13rem;
+        margin-left: 3rem;
+    }
+
+    .curr-loc-time-date h3 {
+        font-size: 2.5rem;
+    }
+
+    .curr-loc-time-date p {
+        font-size: 1rem;
+    }
+
+    .cloud-icon {
+        width: 3rem;
+    }
+
+    .container {
+        flex-direction: column;
+        max-width: 100vw;
+        margin: auto;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .right-container {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .right-content {
+        padding: 1rem 0rem;
+    }
+
+    .temprature {
+        font-size: 7.5rem;
+    }
+
+    .weather-details {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .weather-condition {
+        text-align: center;
+    }
+
+    .weather-stats {
+        padding: 0rem 15rem;
+        font-size: 1rem;
+    }
+
+    .weather-forecast {
+        text-align: center;
+    }
+
+    .weather-forecast-stats {
+        padding: 0rem 15rem;
+    }
+
+    .search-box {
+        width: 40%;
+        margin: auto;
+    }
+
+    .border {
+        width: 40%;
+        margin: auto;
+    }
+
+}
+
+/* Desktop view - horizontal */
+@media (min-width: 1025px) {
+    body {
+        background-image: url(asset/bg-weather-desktop.png);
+        background-size: 100vw 100vh;
+    }
+
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 82vw;
+        margin: auto;
+    }
+
+    .right-container {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 40%;
+        height: 100vh;
+    }
+
+    .right-content {
+        width: 25rem;
+        height: 100%;
+    }
+
+    .curr-loc-time-date h3 {
+        max-width: 14rem;
+    }
+}
+
+@media (max-width:767px) {
+    .logo {
+        margin-left: 3rem;
+    }
+
+    .weather-info {
+        margin-top: 8rem;
+    }
+
+    .curr-loc-time-date h3 {
+        font-size: 2rem;
+    }
+
+    .curr-loc-time-date p {
+        font-size: 0.8rem;
+    }
+
+    .cloud-icon {
+        width: 3rem;
+    }
+
+    .container {
+        flex-direction: column;
+        max-width: 100vw;
+        margin: auto;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .right-container {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .right-content {
+        padding: 1rem 0rem;
+    }
+
+    .weather-details {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .weather-condition {
+        text-align: center;
+    }
+
+    .weather-stats {
+        padding: 0rem 5rem;
+        font-size: 1rem;
+    }
+
+    .weather-forecast {
+        text-align: center;
+    }
+
+    .weather-forecast-stats {
+        padding: 0rem 5rem;
+    }
+
+    .search-box {
+        width: 70%;
+        margin: auto;
+    }
+
+    .border {
+        width: 70%;
+        margin: auto;
+    }
+
+}
